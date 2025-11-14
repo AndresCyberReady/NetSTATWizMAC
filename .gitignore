@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Generated HTML reports (may contain sensitive network information)
+network_map.html
+network_tables.html
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables and secrets
+.env
+*.key
+*.pem
+secrets.txt
+
+# Logs
+*.log
+
