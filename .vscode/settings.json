@@ -1,0 +1,10 @@
+{
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "python.analysis.extraPaths": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false
+}
+
