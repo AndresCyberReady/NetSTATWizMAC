@@ -623,6 +623,30 @@ class NetStatWiz:
             print(f"  {country}: {count} connections")
 
 
+def display_intro():
+    """Display the CyberReady ASCII art intro."""
+    try:
+        # Try to read from CyberReady.txt in the same directory as the script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        cyberready_path = os.path.join(script_dir, "CyberReady.txt")
+        
+        if os.path.exists(cyberready_path):
+            with open(cyberready_path, 'r', encoding='utf-8') as f:
+                ascii_art = f.read()
+            print("\n" + ascii_art)
+        else:
+            # Fallback if file doesn't exist
+            print("\n" + "="*60)
+            print("CyberReady - Network Statistics Wizard")
+            print("="*60)
+    except Exception as e:
+        # If there's any error reading the file, just print a simple header
+        print("\n" + "="*60)
+        print("NetStatWiz - Network Statistics Wizard")
+        print("="*60)
+    print()  # Extra blank line for spacing
+
+
 def check_dependencies():
     """Check for required dependencies and provide installation instructions."""
     missing_deps = []
@@ -654,6 +678,9 @@ def check_dependencies():
 
 def main():
     """Main entry point."""
+    # Display ASCII art intro
+    display_intro()
+    
     print("="*60)
     print("NetStatWiz - Network Statistics Wizard")
     print("="*60)
@@ -690,6 +717,8 @@ def main():
     print("Files generated:")
     print("  - network_map.html (interactive map)")
     print("  - network_tables.html (detailed tables)")
+    print(" Thank you for using NetStatWiz!")
+    print(" Visit cyberready.world for more tools and resources.")
 
 
 if __name__ == "__main__":
